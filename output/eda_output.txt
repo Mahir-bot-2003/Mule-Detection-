@@ -1,0 +1,329 @@
+﻿
+======================================================================
+  LOADING ALL SMALL PARQUET FILES
+======================================================================
+
+--- customers ---
+  Shape: 159,416 rows ╫ 14 columns
+  Columns: ['customer_id', 'date_of_birth', 'relationship_start_date', 'pan_available', 'aadhaar_available', 'passport_available', 'mobile_banking_flag', 'internet_banking_flag', 'atm_card_flag', 'demat_flag', 'credit_card_flag', 'fastag_flag', 'customer_pin', 'permanent_pin']
+  Dtypes:
+    customer_id                              str             nulls: 0 (0.0%)
+    date_of_birth                            str             nulls: 0 (0.0%)
+    relationship_start_date                  str             nulls: 0 (0.0%)
+    pan_available                            str             nulls: 0 (0.0%)
+    aadhaar_available                        str             nulls: 67,822 (42.5%)
+    passport_available                       str             nulls: 0 (0.0%)
+    mobile_banking_flag                      str             nulls: 0 (0.0%)
+    internet_banking_flag                    str             nulls: 0 (0.0%)
+    atm_card_flag                            str             nulls: 0 (0.0%)
+    demat_flag                               str             nulls: 0 (0.0%)
+    credit_card_flag                         str             nulls: 0 (0.0%)
+    fastag_flag                              str             nulls: 0 (0.0%)
+    customer_pin                             int64           nulls: 0 (0.0%)
+    permanent_pin                            int64           nulls: 0 (0.0%)
+
+  First 3 rows:
+customer_id date_of_birth relationship_start_date pan_available aadhaar_available passport_available mobile_banking_flag internet_banking_flag atm_card_flag demat_flag credit_card_flag fastag_flag  customer_pin  permanent_pin
+CUST_000000    1950-07-15              2019-10-03             Y                 Y                  N                   Y                     Y             Y          N                Y           N        515008         515008
+CUST_000002    1985-08-01              1999-08-19             N                 N                  N                   Y                     N             Y          N                N           N        144074         144074
+CUST_000003    1972-03-18              2018-04-28             N                 Y                  N                   N                     N             Y          N                N           N        190033         190033
+
+--- accounts ---
+  Shape: 160,153 rows ╫ 22 columns
+  Columns: ['account_id', 'account_status', 'product_code', 'currency_code', 'account_opening_date', 'branch_code', 'branch_pin', 'avg_balance', 'product_family', 'nomination_flag', 'cheque_allowed', 'cheque_availed', 'num_chequebooks', 'last_mobile_update_date', 'kyc_compliant', 'last_kyc_date', 'rural_branch', 'monthly_avg_balance', 'quarterly_avg_balance', 'daily_avg_balance', 'freeze_date', 'unfreeze_date']
+  Dtypes:
+    account_id                               str             nulls: 0 (0.0%)
+    account_status                           str             nulls: 0 (0.0%)
+    product_code                             int64           nulls: 0 (0.0%)
+    currency_code                            int64           nulls: 0 (0.0%)
+    account_opening_date                     str             nulls: 0 (0.0%)
+    branch_code                              int64           nulls: 0 (0.0%)
+    branch_pin                               float64         nulls: 15,505 (9.7%)
+    avg_balance                              float64         nulls: 9,468 (5.9%)
+    product_family                           str             nulls: 0 (0.0%)
+    nomination_flag                          str             nulls: 0 (0.0%)
+    cheque_allowed                           str             nulls: 0 (0.0%)
+    cheque_availed                           str             nulls: 0 (0.0%)
+    num_chequebooks                          int64           nulls: 0 (0.0%)
+    last_mobile_update_date                  str             nulls: 135,918 (84.9%)
+    kyc_compliant                            str             nulls: 0 (0.0%)
+    last_kyc_date                            str             nulls: 0 (0.0%)
+    rural_branch                             str             nulls: 0 (0.0%)
+    monthly_avg_balance                      float64         nulls: 9,468 (5.9%)
+    quarterly_avg_balance                    float64         nulls: 0 (0.0%)
+    daily_avg_balance                        float64         nulls: 0 (0.0%)
+    freeze_date                              str             nulls: 148,372 (92.6%)
+    unfreeze_date                            str             nulls: 156,447 (97.7%)
+
+  First 3 rows:
+ account_id account_status  product_code  currency_code account_opening_date  branch_code  branch_pin  avg_balance product_family nomination_flag cheque_allowed cheque_availed  num_chequebooks last_mobile_update_date kyc_compliant last_kyc_date rural_branch  monthly_avg_balance  quarterly_avg_balance  daily_avg_balance freeze_date unfreeze_date
+ACCT_000000         active           200              1           2023-08-30         7982    515008.0     53720.31              K               Y              Y              Y                0                     NaN             Y    2023-11-04            Y             50111.60               55554.79           66771.57         NaN           NaN
+ACCT_000002         active          1133              1           2019-08-05         5479    144074.0      9492.82              O               N              N              N                0                     NaN             Y    2021-10-03            N              9169.02                6925.45            8737.84         NaN           NaN
+ACCT_000003         active           146              1           2023-10-31         8227    190033.0     93286.70              S               N              Y              Y                3                     NaN             Y    2024-10-25            N             86326.00              100171.75           78181.17         NaN           NaN
+
+--- demographics ---
+  Shape: 159,416 rows ╫ 9 columns
+  Columns: ['customer_id', 'name', 'gender', 'address_last_update_date', 'address', 'phone_number', 'passbook_last_update_date', 'joint_account_flag', 'nri_flag']
+  Dtypes:
+    customer_id                              str             nulls: 0 (0.0%)
+    name                                     str             nulls: 0 (0.0%)
+    gender                                   str             nulls: 0 (0.0%)
+    address_last_update_date                 str             nulls: 0 (0.0%)
+    address                                  str             nulls: 0 (0.0%)
+    phone_number                             str             nulls: 0 (0.0%)
+    passbook_last_update_date                str             nulls: 47,885 (30.0%)
+    joint_account_flag                       str             nulls: 0 (0.0%)
+    nri_flag                                 str             nulls: 0 (0.0%)
+
+  First 3 rows:
+customer_id             name gender address_last_update_date                     address  phone_number passbook_last_update_date joint_account_flag nri_flag
+CUST_000000 Suresh Mukherjee      M               2019-01-07 231 Civil Lines, Vijayawada 91-6999889419                2022-11-28                  N        N
+CUST_000002   Swati Banerjee      F               2024-08-14    271 Park Avenue, Chennai 91-7580284789                2021-05-12                  N        N
+CUST_000003    Reyansh Patel      M               2024-07-13        14 Park Avenue, Pune 91-9908446104                       NaN                  N        N
+
+--- branch ---
+  Shape: 9,000 rows ╫ 9 columns
+  Columns: ['branch_code', 'branch_address', 'branch_pin_code', 'branch_city', 'branch_state', 'branch_employee_count', 'branch_turnover', 'branch_asset_size', 'branch_type']
+  Dtypes:
+    branch_code                              int64           nulls: 0 (0.0%)
+    branch_address                           str             nulls: 0 (0.0%)
+    branch_pin_code                          int64           nulls: 0 (0.0%)
+    branch_city                              str             nulls: 0 (0.0%)
+    branch_state                             str             nulls: 0 (0.0%)
+    branch_employee_count                    int64           nulls: 0 (0.0%)
+    branch_turnover                          float64         nulls: 0 (0.0%)
+    branch_asset_size                        float64         nulls: 0 (0.0%)
+    branch_type                              str             nulls: 0 (0.0%)
+
+  First 3 rows:
+ branch_code                     branch_address  branch_pin_code branch_city branch_state  branch_employee_count  branch_turnover  branch_asset_size branch_type
+        1000     89 Commercial Complex, Jodhpur           474005     Jodhpur   Tamil Nadu                     18            18.09             161.24       urban
+        1001            30 Station Area, Bhopal           695037      Bhopal    Telangana                     34            17.38             388.79       urban
+        1002 155 Commercial Complex, Coimbatore           670012  Coimbatore    Telangana                     23            10.63             280.17  semi-urban
+
+--- product_details ---
+  Shape: 159,416 rows ╫ 11 columns
+  Columns: ['customer_id', 'loan_sum', 'loan_count', 'cc_sum', 'cc_count', 'od_sum', 'od_count', 'ka_sum', 'ka_count', 'sa_sum', 'sa_count']
+  Dtypes:
+    customer_id                              str             nulls: 0 (0.0%)
+    loan_sum                                 float64         nulls: 126,103 (79.1%)
+    loan_count                               int64           nulls: 0 (0.0%)
+    cc_sum                                   float64         nulls: 133,781 (83.9%)
+    cc_count                                 int64           nulls: 0 (0.0%)
+    od_sum                                   float64         nulls: 0 (0.0%)
+    od_count                                 int64           nulls: 0 (0.0%)
+    ka_sum                                   float64         nulls: 0 (0.0%)
+    ka_count                                 int64           nulls: 0 (0.0%)
+    sa_sum                                   float64         nulls: 0 (0.0%)
+    sa_count                                 int64           nulls: 0 (0.0%)
+
+  First 3 rows:
+customer_id   loan_sum  loan_count    cc_sum  cc_count    od_sum  od_count   ka_sum  ka_count  sa_sum  sa_count
+CUST_000000        NaN           0 117176.98         1      0.00         0 53720.31         1     0.0         0
+CUST_000002        NaN           0       NaN         0 -25821.38         1     0.00         0     0.0         0
+CUST_000003 -158176.92           2       NaN         0      0.00         0     0.00         0 93286.7         1
+
+--- accounts_additional ---
+  Shape: 160,153 rows ╫ 2 columns
+  Columns: ['account_id', 'scheme_code']
+  Dtypes:
+    account_id                               str             nulls: 0 (0.0%)
+    scheme_code                              str             nulls: 0 (0.0%)
+
+  First 3 rows:
+ account_id scheme_code
+ACCT_000000       PMJDY
+ACCT_000002     REGULAR
+ACCT_000003     REGULAR
+
+--- customer_account_linkage ---
+  Shape: 160,153 rows ╫ 2 columns
+  Columns: ['customer_id', 'account_id']
+  Dtypes:
+    customer_id                              str             nulls: 0 (0.0%)
+    account_id                               str             nulls: 0 (0.0%)
+
+  First 3 rows:
+customer_id  account_id
+CUST_000000 ACCT_000000
+CUST_000002 ACCT_000002
+CUST_000003 ACCT_000003
+
+--- train_labels ---
+  Shape: 96,091 rows ╫ 5 columns
+  Columns: ['account_id', 'is_mule', 'mule_flag_date', 'alert_reason', 'flagged_by_branch']
+  Dtypes:
+    account_id                               str             nulls: 0 (0.0%)
+    is_mule                                  int64           nulls: 0 (0.0%)
+    mule_flag_date                           str             nulls: 93,408 (97.2%)
+    alert_reason                             str             nulls: 93,653 (97.5%)
+    flagged_by_branch                        float64         nulls: 93,408 (97.2%)
+
+  First 3 rows:
+ account_id  is_mule mule_flag_date alert_reason  flagged_by_branch
+ACCT_000000        0            NaN          NaN                NaN
+ACCT_000002        0            NaN          NaN                NaN
+ACCT_000003        0            NaN          NaN                NaN
+
+--- test_accounts ---
+  Shape: 64,062 rows ╫ 1 columns
+  Columns: ['account_id']
+  Dtypes:
+    account_id                               str             nulls: 0 (0.0%)
+
+  First 3 rows:
+ account_id
+ACCT_000005
+ACCT_000007
+ACCT_000009
+
+======================================================================
+  CLASS IMBALANCE (train_labels)
+======================================================================
+  Total training accounts: 96,091
+  Mule accounts (is_mule=1): 2,683
+  Legitimate accounts (is_mule=0): 93,408
+  Mule rate: 0.0279 (2.79%)
+
+  Alert reason distribution:
+alert_reason
+NaN                                         93653
+Routine Investigation                         705
+Dormant Account Reactivation                  188
+Rapid Movement of Funds                       177
+MCC-Amount Distribution Anomaly               150
+Structuring Transactions Below Threshold      146
+Geographic Anomaly Detected                   144
+Unusual Fund Flow Pattern                     141
+Income-Transaction Mismatch                   134
+Branch Cluster Investigation                  128
+High-Value Activity on New Account            120
+Post-Contact-Update Spike                     109
+Round Amount Pattern                          105
+Layered Transaction Pattern                    98
+Salary Cycle Anomaly                           93
+
+  Mule flag date range: 2015-09-05 00:00:00 to 2026-03-20 00:00:00
+
+  Unique flagging branches: 1551
+  Top 10 flagging branches:
+flagged_by_branch
+4500.0    193
+8800.0    189
+2050.0    186
+1001.0    186
+6200.0    182
+4091.0     14
+1523.0     14
+7245.0     11
+2847.0      8
+8103.0      8
+
+======================================================================
+  TEST ACCOUNTS
+======================================================================
+  Test accounts to predict: 64,062
+  Sample:  account_id
+ACCT_000005
+ACCT_000007
+ACCT_000009
+ACCT_000015
+ACCT_000016
+
+======================================================================
+  ACCOUNT OVERLAP CHECK
+======================================================================
+  Train account IDs: 96,091
+  Test account IDs:  64,062
+  Overlap:           0
+  Total unique:      160,153
+
+======================================================================
+  TRANSACTION FILES STRUCTURE
+======================================================================
+
+  transactions/: 396 part files
+    batch-1: 100 parts
+    batch-2: 100 parts
+    batch-3: 100 parts
+    batch-4: 96 parts
+
+--- transactions (first part) ---
+  Shape: 1,000,000 rows ╫ 8 columns
+  Columns: ['transaction_id', 'account_id', 'transaction_timestamp', 'mcc_code', 'channel', 'amount', 'txn_type', 'counterparty_id']
+  Dtypes:
+    transaction_id                           str             nulls: 0 (0.0%)
+    account_id                               str             nulls: 0 (0.0%)
+    transaction_timestamp                    str             nulls: 0 (0.0%)
+    mcc_code                                 int64           nulls: 0 (0.0%)
+    channel                                  str             nulls: 0 (0.0%)
+    amount                                   float64         nulls: 0 (0.0%)
+    txn_type                                 str             nulls: 0 (0.0%)
+    counterparty_id                          str             nulls: 0 (0.0%)
+
+  First 3 rows:
+transaction_id  account_id transaction_timestamp  mcc_code channel  amount txn_type counterparty_id
+TXN_0000000000 ACCT_000000   2023-08-31T08:37:05      5682     END   62.72        D       CP_058858
+TXN_0000000001 ACCT_000000   2023-08-31T11:29:04      5651     UPD  178.49        D       CP_099834
+TXN_0000000002 ACCT_000000   2023-08-31T13:31:35      5651     CCL 1000.00        D       CP_045934
+
+  Estimated total rows: ~396,000,000
+
+  transactions_additional/: 311 part files
+    batch-1: 100 parts
+    batch-2: 100 parts
+    batch-3: 100 parts
+    batch-4: 11 parts
+
+--- transactions_additional (first part) ---
+  Shape: 1,400,000 rows ╫ 9 columns
+  Columns: ['transaction_id', 'mnemonic_code', 'latitude', 'longitude', 'ip_address', 'balance_after_transaction', 'part_transaction_type', 'atm_deposit_channel_code', 'transaction_sub_type']
+  Dtypes:
+    transaction_id                           str             nulls: 0 (0.0%)
+    mnemonic_code                            str             nulls: 0 (0.0%)
+    latitude                                 float64         nulls: 1,033,323 (73.8%)
+    longitude                                float64         nulls: 1,033,323 (73.8%)
+    ip_address                               str             nulls: 916,078 (65.4%)
+    balance_after_transaction                float64         nulls: 0 (0.0%)
+    part_transaction_type                    str             nulls: 0 (0.0%)
+    atm_deposit_channel_code                 str             nulls: 1,396,180 (99.7%)
+    transaction_sub_type                     str             nulls: 0 (0.0%)
+
+  First 3 rows:
+transaction_id mnemonic_code  latitude  longitude      ip_address  balance_after_transaction part_transaction_type atm_deposit_channel_code transaction_sub_type
+TXN_0000000000           END       NaN        NaN 122.175.102.100                   53657.59                    CI                      NaN               normal
+TXN_0000000001           UPD 15.786843  78.077894  103.92.190.204                   53479.10                    CI                      NaN               normal
+TXN_0000000002           CCL       NaN        NaN             NaN                   52479.10                    CI                      NaN               normal
+
+  Estimated total rows: ~435,400,000
+
+======================================================================
+  KEY DISTRIBUTIONS
+======================================================================
+
+  Account balance stats:
+    avg_balance: mean=55211.73, median=5110.86, min=-75945400.18, max=226374419.94
+    monthly_avg_balance: mean=56290.59, median=5068.20, min=-82365133.66, max=209856381.56
+    quarterly_avg_balance: mean=55190.98, median=4976.29, min=-88036218.93, max=259585228.21
+    daily_avg_balance: mean=53911.97, median=4814.47, min=-101552329.90, max=162747451.59
+
+  Product family distribution:
+product_family
+S    93852
+K    49977
+O    16324
+
+  Account status distribution:
+account_status
+active    151991
+frozen      8162
+
+  KYC document availability:
+    pan_available: {'Y': 114224, 'N': 45192}
+    aadhaar_available: {'Y': 56945, 'N': 34649}
+    passport_available: {'N': 128467, 'Y': 30949}
+
+======================================================================
+  EDA COMPLETE
+======================================================================
+  Review the output above and then run: python 02_feature_engineering.py
